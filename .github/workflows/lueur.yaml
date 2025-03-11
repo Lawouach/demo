@@ -22,6 +22,7 @@ jobs:
         scenario: scenario.yaml
         report: report.md
         result: results.json
+        create-issue-on-failure: "true"
 
     - name: Terminate demo
       shell: bash
