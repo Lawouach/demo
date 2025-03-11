@@ -15,7 +15,7 @@ jobs:
         curl -s -Lo $HOME/lueur-app https://github.com/Lawouach/demo/releases/download/1/lueur
         chmod +x $HOME/lueur-app
 
-        RUNNER_TRACKING_ID="" && (nohup $HOME/lueur-app/demo run &)
+        RUNNER_TRACKING_ID="" && (nohup $HOME/lueur-app demo run &)
   
     - uses: rebound-how/actions/lueur@main
       with:
