@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: rebound-how/actions@main
+    - uses: rebound-how/actions/lueur@main
       with:
         scenario: lueur
         report: report.md
