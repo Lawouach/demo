@@ -1,0 +1,24 @@
+---
+title: "Latency Increase By 30ms Steps From Downstream"
+description: ""
+scenarios:
+  - call:
+      method: GET
+      url: http://localhost:7070/ping
+    context:
+      upstreams:
+        - https://postman-echo.com
+      faults:
+        - type: latency
+          mean: 80
+          stddev: 5
+          direction: ingress
+          side: client
+      strategy:
+        mode: Repeat
+        step: 30
+        count: 3
+        add_baseline_call: true
+    expect:
+      status: 200
+      response_time_under: 490
