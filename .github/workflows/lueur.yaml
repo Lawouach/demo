@@ -23,6 +23,7 @@ jobs:
         report: report.md
         result: results.json
         create-issue-on-failure: "true"
+        github-token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Terminate demo
       shell: bash
