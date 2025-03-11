@@ -19,7 +19,7 @@ jobs:
   
     - uses: rebound-how/actions/lueur@main
       with:
-        scenario: lueur
+        scenario: scenario.yaml
         report: report.md
         result: results.json
 
